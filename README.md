@@ -12,4 +12,4 @@
 
 ### Running: ###
 
- Run the app: `node app.js` (The app will be running at `localhost:8080`)
+ Run the app: `npm start` or `node app.js` (The app will be running at `localhost:8080`)

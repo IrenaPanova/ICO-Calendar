@@ -1,7 +1,7 @@
 const fs = require('fs');
 const request = require('request');
 const path = require('path');
-const TARGET_PATH = path.join(__dirname, '../calendar/public/icons/');
+const TARGET_PATH = path.join(__dirname, '../ICO-Calendar/public/icons/');
 
 exports.writeIcon = function (uri, filename, callback) {
     request.head(uri, function (err, res, body) {
