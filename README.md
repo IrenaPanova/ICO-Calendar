@@ -4,7 +4,7 @@
 
 ### Installation & Configuration ###
 
- `git clone https://github.com/{the repo}.git`
+ `git clone https://github.com/IrenaPanova/ICO-Calendar.git`
 
 #### Install local dependencies: ####
 
