@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>ICO Calendar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <h2>ICO Calendar</h2>
+                </div>
+            </div>
+            <br/>
+            <div class="row justify-content-md-center">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Website</th>
+                                <th scope="col">Token Symbol</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#data }}
+                            <tr>
+                                <td><img src="../icons/{{imageSrc}}" alt="Info icon"></td>
+                                <td>
+                                    <div class="name">
+                                        {{name}}
+                                    </div>
+                                    <br/>
+                                    <div class="shortDescription">
+                                        {{shortDescription}}
+                                    </div>
+
+                                </td>
+                                <td class="text-center">
+                                    <div class="date">{{startDate}}</div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="date">{{endDate}}</div>
+                                </td>
+                                <td class="text-center">
+                                    <a class="website" target="_blank" href="{{website}}">website</a>
+                                </td>
+                                <td class="text-center">{{tokenSymbol}}</td>
+                                <td>
+                                    <img class="btn-link" data-toggle="collapse" data-target="#collapse-{{@index}}" aria-expanded="false" aria-controls="collapseOne" id="info" src="info.png" alt="Info icon">
+                                </td>
+                            </tr>
+                            <tr id="collapse-{{@index}}" class="collapse shade" aria-labelledby="headingOne" data-parent="#accordion" class="collapse description">
+                                <td colspan="7">
+                                    {{fullDescription}}
+                                </td>
+                            </tr>
+                            {{/data}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
